@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiWS1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="cash1.png"
+                SemanticProperties.Description="Cash"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Enter amount to convert"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="display"
+                Text="Eur to Ron"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Eur to Ron"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            
+            <Entry
+                x:Name="entry"
+                Placeholder="Amount in EUR"
+                FontSize="20"
+                MaxLength="10"
+                HorizontalTextAlignment="Center"
+                TextChanged="TextChanged"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="convert_b"
+                Text="Convert"
+                SemanticProperties.Hint="Convert money"
+                Clicked="convertmoney"
+                BackgroundColor="Purple"
+                TextColor="Black"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Go to Guess the number"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="clicked"
+                BackgroundColor="Purple"
+                TextColor="Black"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

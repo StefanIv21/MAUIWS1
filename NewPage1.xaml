@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiWS1.NewPage1">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+         
+
+            <Label
+                Text="I'm thinking of a number between 1 and 100!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="It's your turn to guess my number"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+
+            <Label 
+                x:Name="Tried"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="30"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Label 
+                x:Name="Result"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="30"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Try a number!"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="16"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="number_entry"
+                Placeholder="Good luck!"
+                FontSize="20"
+                MaxLength="3"
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                TextChanged="number_entry_TextChanged" />
+
+            <Button
+                x:Name="guess_btn"
+                Text="Make a Guess"
+                HorizontalOptions="Center"
+                BackgroundColor="Green"
+                TextColor="White"
+                Clicked="guess_number"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
